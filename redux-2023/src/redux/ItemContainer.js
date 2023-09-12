@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { buyCake } from './cake/cakeAction';
-import { buyIcecream } from './iceCream/iceCreamActions'
+import { buyIceCream } from './iceCream/iceCreamActions'
 
 const ItemContainer = (props) => {
     return (
@@ -20,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    const dispatchFunction = ownProps.cake?()=>dispatch(buyCake()): ()=> dispatch(buyIcecream())
+    const dispatchFunction = ownProps.cake?()=>dispatch(buyCake()): ()=> dispatch(buyIceCream())
     return{
         buyItem: dispatchFunction
     }    
